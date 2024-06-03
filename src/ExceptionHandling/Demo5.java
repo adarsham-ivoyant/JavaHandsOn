@@ -1,10 +1,15 @@
 package ExceptionHandling;
 
+class Mytemp extends Exception{
+    public Mytemp(String message) {
+        super(message);
+    }
+}
 public class Demo5 {
 
-    static int area(int l,int b) throws Exception{
+    static int area(int l,int b) throws Mytemp {
         if(l<0 || b < 0)
-            throw new Exception();
+            throw new Mytemp("err");
         return l+b;
     }
     static void meth1() throws Exception{
